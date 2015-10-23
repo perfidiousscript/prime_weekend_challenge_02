@@ -2,14 +2,15 @@ div {
     border: 1px solid #0aff16;
 }
 
-.main {
-
+#lecture {
+    margin: 0 185px;
 }
 
 .nav-button {
     width: 100px;
     text-align: center;
     display: inline-block;
+    font-size: 72px;
 }
 
 .index-point {
@@ -17,8 +18,9 @@ div {
     height: 10px;
     margin: 0 5px;
     background-color: #9d9487;
-    border: 1px solid black;
     display: inline-block;
+    font-size: 23px;
+    border-radius: 100%;
 }
 
 .index-point-active {
