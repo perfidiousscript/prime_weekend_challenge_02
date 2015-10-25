@@ -36,7 +36,7 @@ function createCarousel(array) {
     var $el = $("#lecture").children().last();
     createIndexPoints(array, $el);
     createNavButtons($el);
-    var nextInterval = window.setInterval(nextSlide, 10000);
+    var nextInterval = setInterval(nextSlide, 10000);
 }
 
 //Function which updates the indexTracker and active point when advanced. Also updates information presented in the
@@ -63,7 +63,6 @@ function prevSlide() {
     window.setTimeout(updateIndexPoints,500);
     allFadeIn();
     intervalReset();
-
 }
 //Prepends a div to the lecture div that reverses the carousel when clicked and appends a div to the lecture
 // div that advances the carousel when clicked.
@@ -117,6 +116,6 @@ function allFadeIn(){
 function intervalReset(){
     clearInterval(nextInterval);
     setTimeout(function() {
-        window.setInterval(nextSlide, 10000);
+        nextInterval = setInterval(nextSlide, 10000);
     }, 10000);
 }
