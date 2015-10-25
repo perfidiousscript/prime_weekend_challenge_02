@@ -34,8 +34,10 @@ function nextSlide() {
     if (indexTracker >= peopleArray.length) {
         indexTracker = 0;
     }
+    allFadeOut();
+    window.setTimeout(updateIndexPoints,500);
+    allFadeIn();
 
-    updateIndexPoints();
 }
 
 function prevSlide() {
@@ -43,14 +45,18 @@ function prevSlide() {
     if (indexTracker < 0) {
         indexTracker = peopleArray.length - 1;
     }
+    allFadeOut();
+    window.setTimeout(updateIndexPoints,500);
+    allFadeIn();
 
-    updateIndexPoints();
 }
-
+//Prepends a div to the lecture div that reverses the carousel when clicked and appends a div to the lecture
+// div that advances the carousel when clicked.
 function createNavButtons($el) {
-    $("#lecture").children().prepend("<div id='prev' class='nav-button'><span><</span></div>");
+    $el.prepend("<div id='prev' class='nav-button'><span><</span></div>");
     $el.append("<div id='next' class='nav-button'><span>></span></div>");
 }
+
 
 function createIndexPoints(array, $el) {
     for (var i = 0; i < array.length; i++) {
@@ -70,8 +76,23 @@ function updateIndexPoints() {
     }
 }
 
+
+//This function updates the information in the 'currentStudent' div with that data stored in the object at the
+// 'indexTracker' position of the zeta array.
 function updateCurrentStudent(position){
     $('#studentName').text(peopleArray[position].name);
     $('#studentGithub').text(peopleArray[position].github);
     $('#studentShoutout').text(peopleArray[position].shoutout);
+}
+
+function allFadeOut(){
+    $('#studentName').fadeOut();
+    $('#studentGithub').fadeOut();
+    $('#studentShoutout').fadeOut();
+}
+
+function allFadeIn(){
+    $('#studentName').fadeIn();
+    $('#studentGithub').fadeIn();
+    $('#studentShoutout').fadeIn();
 }

@@ -8,14 +8,19 @@ div {
 
 .info {
     width: 100%;
-    margin: 15 auto;
+    margin: auto;
     font-size: 15pt;
     text-align: center;
 }
 
 #currentStudent {
     width: 85%;
+    height: 350px;
     margin: 118px auto 0 auto;
+    padding: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 #lecture {
