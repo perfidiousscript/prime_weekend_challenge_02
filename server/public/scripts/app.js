@@ -98,7 +98,7 @@ function updateIndexPoints() {
 // 'indexTracker' position of the zeta array.
 function updateCurrentStudent(position){
     $('#studentName').text(peopleArray[position].name);
-    $('#studentGithub').text(peopleArray[position].github);
+    $('#studentGithub').html("<a href='" + peopleArray[position].github + "'>"+peopleArray[position].github+"</a>");
     $('#studentShoutout').text(peopleArray[position].shoutout);
 }
 
