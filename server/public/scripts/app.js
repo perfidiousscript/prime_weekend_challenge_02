@@ -7,19 +7,17 @@ $(document).ready(function() {
         success : function(data) {
 
             peopleArray = data.zeta;
-            console.log("This is result of ajax call: ", peopleArray);
+            //console.log("This is result of ajax call: ", peopleArray);
 
             createCarousel(peopleArray);
 
             updateIndexPoints();
 
+            $("#next").on('click', nextSlide);
+
+            $("#prev").on('click', prevSlide);
         }
     });
-    
-    $("#next").on('click', nextSlide);
-
-    $("#prev").on('click', prevSlide);
-
 });
 
 
@@ -56,7 +54,7 @@ function createNavButtons($el) {
 
 function createIndexPoints(array, $el) {
     for (var i = 0; i < array.length; i++) {
-        $el.append("<div class='index-point' id='index" + i + "'>"+ i +"</div>")
+        $el.append("<div class='index-point' id='index" + i + "'><div class='num'>"+ i +"</div></div>")
 
     }
 }

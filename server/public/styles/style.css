@@ -1,9 +1,15 @@
+body {
+    background-color: lightgrey;
+}
+
 div {
-    border: 1px solid #0aff16;
+    border: 1px solid #black;
 }
 
 #lecture {
-    margin: 0 185px;
+    margin: 0 auto;
+    position: relative;
+    top: 250px;
 }
 
 .nav-button {
@@ -21,8 +27,15 @@ div {
     display: inline-block;
     font-size: 23px;
     border-radius: 100%;
+    margin: 15px;
 }
 
 .index-point-active {
-    background-color: red;
+    background-color: lightblue;
+}
+
+.num {
+    position: relative;
+    top: 11px;
+    left: -3px;
 }
