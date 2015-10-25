@@ -4,7 +4,7 @@
 
 //'peopleArray' will hold the data pulled from the server, 'indexTrack' holds the number that specifies
 //which object's information will be presented.
-var peopleArray = [], indexTracker = 0;
+var peopleArray = [], indexTracker = 0, nextInterval;
 
 //Main jQuery script.
 $(document).ready(function() {
@@ -20,6 +20,8 @@ $(document).ready(function() {
             createCarousel(peopleArray);
 
             updateIndexPoints();
+
+            nextInterval = setInterval(nextSlide, 10000);
             //Advances the carousel when the next button is clicked.
             $("#next").on('click', nextSlide);
 
@@ -36,7 +38,6 @@ function createCarousel(array) {
     var $el = $("#lecture").children().last();
     createIndexPoints(array, $el);
     createNavButtons($el);
-    var nextInterval = setInterval(nextSlide, 10000);
 }
 
 //Function which updates the indexTracker and active point when advanced. Also updates information presented in the
@@ -115,7 +116,7 @@ function allFadeIn(){
 
 function intervalReset(){
     clearInterval(nextInterval);
-    setTimeout(function() {
-        nextInterval = setInterval(nextSlide, 10000);
-    }, 10000);
+    nextInterval = setInterval(nextSlide, 10000);
 }
+
+//Written off a template by Sam Moss, October 23-25 as an assignment for Prime Digital Academy.

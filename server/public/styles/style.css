@@ -24,9 +24,13 @@ div {
 }
 
 #lecture {
-    margin: 0 auto;
+    margin: =50px auto;
     position: relative;
-    top: 150px;
+    text-align: center;
+}
+
+.main {
+    margin: 0 auto;
 }
 
 .nav-button {
