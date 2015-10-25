@@ -16,6 +16,8 @@ $(document).ready(function() {
             $("#next").on('click', nextSlide);
 
             $("#prev").on('click', prevSlide);
+
+            window.setInterval(nextSlide, 10000);
         }
     });
 });
