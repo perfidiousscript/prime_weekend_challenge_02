@@ -66,5 +66,12 @@ function updateIndexPoints() {
         if (i == indexTracker) {
             $("#index" + i).addClass("index-point-active");
         }
+        updateCurrentStudent(indexTracker);
     }
+}
+
+function updateCurrentStudent(position){
+    $('#studentName').text(peopleArray[position].name);
+    $('#studentGithub').text(peopleArray[position].github);
+    $('#studentShoutout').text(peopleArray[position].shoutout);
 }
