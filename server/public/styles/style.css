@@ -7,15 +7,20 @@ div {
 }
 
 .info {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     width: 100%;
     margin: auto;
-    font-size: 15pt;
+    font-size: 30pt;
+    font-weight: 500;
+    color: whitesmoke;
     text-align: center;
 }
 
 #currentStudent {
-    width: 85%;
-    height: 350px;
+    width: 75%;
+    background-color: black;
+    border-radius: 11px;
+    height: 560px;
     margin: 118px auto 0 auto;
     padding: 30px;
     display: flex;
@@ -24,8 +29,8 @@ div {
 }
 
 #lecture {
-    margin: =50px auto;
     position: relative;
+    top: 20px;
     text-align: center;
 }
 
